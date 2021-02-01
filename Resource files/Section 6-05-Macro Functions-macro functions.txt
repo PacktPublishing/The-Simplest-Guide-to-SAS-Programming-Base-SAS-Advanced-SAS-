@@ -1,0 +1,25 @@
+%let a = United States;
+
+%let b = %upcase(&a);
+
+%put ----> &b;
+
+%let c = %lowcase(&a);
+
+%put ----> &c;
+
+%let d= %substr(&a, 1,6);
+
+%put ----> &d;
+
+%let e = %length(&a);
+
+%put ---->&e;
+
+
+%let x = 3.5;
+%let y = 5.2;
+
+%let z = %sysevalf(&x + &y);
+
+%put ------> &z;

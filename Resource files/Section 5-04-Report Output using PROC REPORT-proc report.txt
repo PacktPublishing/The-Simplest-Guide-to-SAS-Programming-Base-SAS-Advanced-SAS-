@@ -1,0 +1,40 @@
+data class;
+input name $ gender $ age course major $;
+cards;
+John M 48 101 STAT
+Peter M 58 101 HIST
+Liz F 25 201 STAT
+Joe M 28 301 ENGG
+Mike M 34 202 HIST
+Pat F 34 201 STAT
+Jil F 45 101 HIST
+Tom M 56 301 ENGG
+;
+run;
+
+proc report data=class;
+columns  name gender  age course major;
+define name/ display;
+define gender/ display;
+define age/ display;
+define course/ display;
+define major/ display;
+run;
+proc report data=class;
+columns  gender  age ;
+define gender/ group;
+define age /analysis mean ;
+
+run;
+
+proc report data=sashelp.cars;
+columns make model type origin msrp;
+define make/ display ;
+define model/display width =20 flow;
+define type/ display;
+define origin/ display;
+define msrp/display;
+run;
+
+
+

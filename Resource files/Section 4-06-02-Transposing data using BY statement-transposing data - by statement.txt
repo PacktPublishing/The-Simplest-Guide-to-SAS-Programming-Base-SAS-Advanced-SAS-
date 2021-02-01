@@ -1,0 +1,21 @@
+data vitals;
+input sid name $ test $ value;
+cards;
+101 John SBP 120
+101 John DBP 90
+102 Joe SBP 132
+103 Peter SBP 100
+104 Liz SBP 99
+103 Peter DBP 67
+102 Joe DBP 49
+;
+run;
+
+proc sort data=vitals;
+by sid name;
+run;
+proc transpose data=vitals out=t_vitals;
+var value;
+id test;
+by sid name;
+run;

@@ -1,0 +1,30 @@
+data bonus;
+input name $ bonus  dob  ;
+informat bonus dollar5. dob date7.;
+cards;
+John $5500 20Apr80 
+Peter $1200 01Mar92
+Liz $6750 24Oct76
+Joe $4560 17Dec87
+;
+run;
+
+data bonus;
+input name $ bonus  dob  ;
+informat bonus dollar5. dob date7.;
+cards;
+John $5500 20Apr80 
+Peter $1200 01Mar92
+Liz $6750 24Oct76
+Joe $4560 17Dec87
+;
+run;
+
+
+
+
+
+
+
+
+

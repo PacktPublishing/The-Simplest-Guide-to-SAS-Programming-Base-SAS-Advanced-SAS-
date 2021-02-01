@@ -1,0 +1,19 @@
+FILENAME reffile '/folders/myshortcuts/myFolders/class.txt';
+
+PROC IMPORT DATAFILE=reffile
+	DBMS=DLM
+	OUT=class replace;
+	GETNAMES=yes;
+	Delimiter=',';
+
+RUN;
+
+FILENAME reffile '/folders/myshortcuts/myFolders/classtab.txt';
+
+PROC IMPORT DATAFILE=reffile
+	DBMS=DLM
+	OUT=class replace;
+	GETNAMES=yes;
+	Delimiter=' ';
+
+RUN;

@@ -1,0 +1,13 @@
+data class;
+set sashelp.class;
+
+Weightkg=weight*0.453592;
+
+heightm = height*2.54/100;
+
+bmi= weightkg/ (heightm*heightm);
+
+
+run;
+
+

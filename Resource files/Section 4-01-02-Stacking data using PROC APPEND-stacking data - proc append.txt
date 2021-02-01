@@ -1,0 +1,41 @@
+data A;
+input name $ gender $ age weight;
+cards;
+John M 48 128.6
+Peter . 58 158.3
+Liz F . 115.5
+Joe M 28 170.1
+;
+run;
+data B;
+input name $ gender $ age weight;
+cards;
+Mike M 34 150.2
+Pat F 56 125.0
+;
+run;
+
+proc append base = C data=A;
+run;
+
+proc append base =C data=B;
+run;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

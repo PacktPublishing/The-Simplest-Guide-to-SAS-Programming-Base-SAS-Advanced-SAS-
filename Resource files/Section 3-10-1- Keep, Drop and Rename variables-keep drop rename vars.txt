@@ -1,0 +1,13 @@
+data class;
+set sashelp.class;
+
+Weightkg=weight*0.453592;
+
+keep name sex age weightkg height;
+drop weight;
+rename sex=gender;
+
+
+run;
+
+

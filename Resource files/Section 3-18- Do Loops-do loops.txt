@@ -1,0 +1,7 @@
+data myTable;
+do i=1 to 10;
+x=i;
+y=i;
+output;
+end;
+run;

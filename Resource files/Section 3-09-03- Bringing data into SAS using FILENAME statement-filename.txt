@@ -1,0 +1,7 @@
+filename myclass '/folders/myshortcuts/myFolders/class.dat';
+data class;
+infile myclass;
+input name $ gender $ age weight;
+run;
+
+

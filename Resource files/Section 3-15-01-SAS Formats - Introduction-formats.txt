@@ -1,0 +1,17 @@
+data salary;
+input name $ salary id;
+format salary dollar10.2 id ssn11.;
+cards;
+John 55000 145233421 
+Peter 85000 432459291
+Liz 67500 912342392
+Joe 34900 170343929
+;
+run;
+
+data salary1;
+	set salary;
+	salarytxt= put(salary,dollar10.2);
+	ssntxt=put(id,ssn11.);
+run;
+

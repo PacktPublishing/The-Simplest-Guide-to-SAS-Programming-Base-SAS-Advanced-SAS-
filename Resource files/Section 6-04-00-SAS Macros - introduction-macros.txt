@@ -1,0 +1,17 @@
+/*proc means data=sashelp.class;
+var age;
+run;
+proc print data=sashelp.cars;
+var msrp;
+run;
+*/
+%macro myreport(lib,dsn,statvar);
+proc means data=&lib..&dsn;
+var &statvar;
+run;
+proc print data=&lib..&dsn;
+run;
+%mend;
+
+%myreport(sashelp,class,age);
+%myreport(sashelp,cars,msrp);

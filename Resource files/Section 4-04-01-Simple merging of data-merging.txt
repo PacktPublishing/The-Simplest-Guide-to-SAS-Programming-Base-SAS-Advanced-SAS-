@@ -1,0 +1,28 @@
+data A;
+input name $ gender $ age weight;
+cards;
+John M 48 128.6
+Peter . 58 158.3
+Liz F . 115.5
+Joe M 28 170.1
+;
+run;
+data B;
+input name $ height;
+cards;
+John 165
+Peter 155
+Liz 176
+Joe 152
+;
+run;
+proc sort data=A;
+by name;
+proc sort data=b;
+by name;
+run;
+
+data C;
+merge A B;
+by name;
+run;

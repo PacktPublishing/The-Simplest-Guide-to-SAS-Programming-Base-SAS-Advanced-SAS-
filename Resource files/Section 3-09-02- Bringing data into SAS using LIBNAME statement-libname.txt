@@ -1,0 +1,5 @@
+libname mylib '/folders/myshortcuts/myFolders';
+data class;
+set mylib.class;
+run;
+

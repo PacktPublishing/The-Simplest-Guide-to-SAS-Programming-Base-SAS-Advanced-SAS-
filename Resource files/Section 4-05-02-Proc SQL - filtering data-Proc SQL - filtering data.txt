@@ -1,0 +1,6 @@
+proc sql;
+create table class as
+select * from sashelp.class
+where sex = 'M'
+quit;
+

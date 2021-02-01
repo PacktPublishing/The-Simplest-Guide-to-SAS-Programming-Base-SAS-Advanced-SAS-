@@ -1,0 +1,25 @@
+data class;
+input name $ gender $ age course major $;
+cards;
+John M 48 101 STAT
+Peter M 58 101 HIST
+Liz F 25 201 STAT
+Joe M 28 301 ENGG
+Mike M 34 202 HIST
+Pat F 34 201 STAT
+Jil F 45 101 HIST
+Tom M 56 301 ENGG
+;
+run;
+
+ods trace on;
+proc freq data= class;
+tables gender;
+run;
+ods trace off;
+
+ods output  Freq.Table1.OneWayFreqs=myFreq;
+proc freq data= class;
+tables gender;
+run;
+ods output off;

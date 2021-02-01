@@ -1,0 +1,10 @@
+data class;
+input name $ 1-5 age 6-7 gender $ @17 weight ;
+cards;
+John 48M         128.6
+Peter58.         158.3
+Liz  . Female    115.5
+Joe  28Male      170.1
+;
+run;
+

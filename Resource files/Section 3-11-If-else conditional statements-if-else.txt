@@ -1,0 +1,16 @@
+data class;
+set sashelp.class;
+
+Weightkg=weight*0.453592;
+
+heightm = height*2.54/100;
+
+bmi= weightkg/ (heightm*heightm);
+
+if bmi<=18 then status='Healthy weight';
+else if 18<bmi<=21 then status='Overweight';
+else if bmi> 21 then status='Obese';
+
+run;
+
+

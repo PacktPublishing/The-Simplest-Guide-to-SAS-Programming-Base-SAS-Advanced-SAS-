@@ -1,0 +1,10 @@
+
+
+proc sql;
+create table class as
+select distinct sex, age from sashelp.class
+order by sex, age
+;
+
+quit;
+

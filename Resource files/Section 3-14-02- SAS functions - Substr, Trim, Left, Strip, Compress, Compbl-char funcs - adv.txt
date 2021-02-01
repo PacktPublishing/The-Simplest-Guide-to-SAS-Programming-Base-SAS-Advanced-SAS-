@@ -1,0 +1,31 @@
+data class;
+input fname $  lname $ class $;
+cards;
+John Doe STAT100
+Liz Hick HIST200
+Dave Higgs ECON100
+AMY WRIGHT STAT200
+Mary Lovel HIST300
+JASON Powel ECON400
+Chris Ryan HIST100
+Peter Paul ECON400
+;
+run;
+
+
+data class1;
+	set class;
+	course=substr(class,1,4);
+	courseno=substr(class,5,4);
+	fullname= cat(trim(left(fname),lname);
+
+	fullname1=cat(strip(fname),lname);
+	
+
+run;
+
+data test;
+	a='     United     States   of    America   ';
+	b=compress(a);
+	c=compbl(a);
+run;

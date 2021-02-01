@@ -1,0 +1,21 @@
+data class;
+	set sashelp.class;
+	where sex ='F';
+run;
+
+
+data class;
+	set sashelp.class;
+	where age =12 ;
+run;
+
+data class;
+	set sashelp.class;
+	where age >13 ;
+run;
+
+
+data class;
+	set sashelp.class;
+	where age ne 14 ;
+run;

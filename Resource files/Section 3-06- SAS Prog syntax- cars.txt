@@ -1,0 +1,6 @@
+data cars;
+	set sashelp.cars;
+run;
+
+proc print data=cars;
+run;

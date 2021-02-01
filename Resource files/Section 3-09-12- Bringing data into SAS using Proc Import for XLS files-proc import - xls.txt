@@ -1,0 +1,8 @@
+FILENAME reffile '/folders/myshortcuts/myFolders/class.xlsx';
+
+PROC IMPORT DATAFILE=reffile
+	DBMS=xlsx
+	OUT=class;
+	GETNAMES=yes;
+
+RUN;

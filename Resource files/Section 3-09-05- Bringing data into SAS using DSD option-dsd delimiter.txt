@@ -1,0 +1,24 @@
+
+data class;
+infile cards delimiter =',' dsd;
+input name $ gender $ age weight;
+cards;
+"John,K",M,48,128.6
+"Peter,P",.,58,158.3
+"Liz,W",F,.,115.5
+"Joe,R",M,28,170.1
+;
+run;
+
+
+
+data class;
+infile cards delimiter =',' dsd;
+input name :$12. gender $ age weight;
+cards;
+"John,Smith",M,48,128.6
+"Peter,Pan",.,58,158.3
+"Liz,Williams",F,.,115.5
+"Joe,Ryan",M,28,170.1
+;
+run;

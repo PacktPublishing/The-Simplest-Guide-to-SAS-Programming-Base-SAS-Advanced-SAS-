@@ -1,0 +1,11 @@
+proc sql;
+create table grpclass as
+select avg(age) as summary, sex from sashelp.class
+group by sex;
+quit;
+
+proc sql;
+create table grpcars as
+select min(msrp) as summary, origin from sashelp.cars
+group by origin;
+quit;

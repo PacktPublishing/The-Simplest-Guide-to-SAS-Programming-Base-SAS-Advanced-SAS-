@@ -1,0 +1,26 @@
+data class;
+input fname $  lname $ class $;
+cards;
+John Doe STAT100
+Liz Hick HIST200
+Dave Higgs ECON100
+AMY WRIGHT STAT200
+Mary Lovel HIST300
+JASON Powel ECON400
+Chris Ryan HIST100
+Peter Paul ECON400
+;
+run;
+
+
+data class1;
+	set class;
+	ufname=upcase(fname);
+	lfname=lowcase(fname);
+
+	plname=propcase(lname);
+
+	lenlname=length(lname);
+
+	fullname=cat(fname,lname);
+run;

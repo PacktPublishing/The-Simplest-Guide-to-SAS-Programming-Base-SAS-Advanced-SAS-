@@ -1,0 +1,14 @@
+%let book = story;
+%let story = funny;
+%let funny = twist;
+%let twist = climax;
+
+%put ------> &book;
+%put ------> &&book;
+%put ------> &&&book;
+%put ------> &&&&book;
+%put ------> &&&&&book;
+%put ------> &&&&&&book;
+%put ------> &&&&&&&book;
+%put ------> &&&&&&&&book;
+%put ------> &&&&&&&&&&&&&&&book;

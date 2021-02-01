@@ -1,0 +1,29 @@
+data salary;
+input name $ month $ salary;
+cards;
+John Q1 3000
+John Q2 2900
+John Q3 3000
+John Q4 2900
+Joe Q1 4000
+Joe Q2 3100
+Joe Q3 3000
+Joe Q4 3900
+Liz Q1 2000
+Liz Q2 1800
+Liz Q3 2000
+Liz Q4 2900
+;
+run;
+
+proc sort ;
+by name ;
+run;
+
+data salary1;
+	set salary;
+	by name ;
+	retain totalsal 0;
+	totalsal=totalsal+salary;
+	if first.name then totalsal=salary;
+run;

@@ -1,0 +1,19 @@
+data class;
+input name $ gender $ age weight;
+cards;
+John M 48 128.6
+John M 48 110.1
+Peter M 58 158.3
+Liz F 45 115.5
+Joe M 28 170.1
+;
+run;
+
+proc sort data= class;
+by name gender age weight;
+run;
+
+proc sort data=class out=sortclass nodupkey;
+by name gender age;
+run;
+

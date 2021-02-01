@@ -1,0 +1,58 @@
+proc format;
+value bmi
+low-18 = 'Healthy'
+18-21= 'Overweight'
+21-high='Obese';
+run;
+
+data class;
+set sashelp.class;
+
+Weightkg=weight*0.453592;
+
+heightm = height*2.54/100;
+
+bmi= weightkg/ (heightm*heightm);
+
+status = put(bmi, bmi.);
+
+run;
+
+
+
+
+data class;
+input name $ gender;
+cards;
+John 1
+Peter 1
+Liz 2
+Joe 1
+;
+run;
+
+proc format;
+value genfmt
+1 ='Male'
+2 ='Female';
+run;
+
+data class1;
+set class;
+*format gender genfmt.;
+
+sex = put (gender, genfmt.);
+run;
+
+
+
+
+
+
+
+
+
+
+
+
+

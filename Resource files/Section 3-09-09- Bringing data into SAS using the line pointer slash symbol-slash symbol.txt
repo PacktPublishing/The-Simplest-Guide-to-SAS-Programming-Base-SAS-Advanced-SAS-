@@ -1,0 +1,14 @@
+data class;
+input fname :$10. lname $13. 
+/ gender $ age weight;
+cards;
+John Smith		 
+M 48 128.6
+Elizabeth Stienkerchner
+F 58 158.3
+Anastasia Miller
+Female . 115.5
+Joe Davis 
+Male 28 170.1
+;
+run;
